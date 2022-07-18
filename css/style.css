@@ -1,0 +1,493 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Mukta', sans-serif;
+}
+.container{
+    width: 1140px;
+    margin: 0 auto;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+/* *********************
+*     header section css
+************************/
+
+header{
+    width: 100%;
+}
+.topbar{
+    width: 100%;
+    background-color: #fff;
+    padding: 40px 0;
+    border-bottom: 1px solid #f3f3f4;
+}
+.topbar-contant{
+    display: flex;
+    justify-content: space-between;
+}
+.logo a{
+    text-transform: uppercase;
+    color: #25262a;
+    font-size: 20px;
+    letter-spacing: .2em;
+    font-weight: 300;
+    border: 2px solid #25262a;
+    padding: 4px 10px;
+}
+.topbar-icon a{
+    color: #868995;
+    margin-left: 10px;
+}
+.topbar-icon a:hover{
+    color: #25262a;
+}
+.topbar-search input{
+    font-size: 16px;
+    padding: 12px;
+    border: none;
+    transition: 0.4s;
+}
+.topbar-search input:focus{
+    outline: none;
+    padding-left: 0;
+    transition: 0.4s;
+}
+.topbar-search i{
+    color: #868995;
+    font-size: 14px;
+    font-weight: 600;
+}
+.main-menu{
+    text-align: center;
+    padding: 16px 0;
+}
+.main-menu li{
+    display: inline-block;
+    padding: 0 12px;
+}
+.main-menu li a{
+    color: #25262a;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 2px;
+    transition: 0.4s;
+}
+.main-menu li a:hover{
+    color: #7971ea;
+    transition: 0.4s;
+}
+
+/* *********************
+*     banner section css
+************************/
+.banner{
+    width: 100%;
+    background-image: url(../images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    padding: 150px 0;
+}
+.banner-contant{
+    display: flex;
+}
+.b-left{
+    flex-basis: 60%;
+}
+.b-right{
+    flex-basis: 40%;
+}
+.b-right h1{
+    font-size: 50px;
+    color: black;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+.b-right p{
+    font-size: 20px;
+    line-height: 35px;
+    font-weight: 300;
+    color: #333333;
+    margin-bottom: 20px;
+}
+.b-right button, .right button{
+    background-color: #7971ea;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-color: #7971ea;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 300;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+.b-right button:hover{
+    background-color: #5a50e5;
+    box-shadow: 0 5px 20px -7px rgba(0, 0, 0, 0.9) !important;
+    transform: translateY(-4px);
+    transition: 0.4s;
+}
+
+/* ********************
+*     about section css
+***********************/
+.about{
+    width: 100%;
+    padding: 60px 0;
+    border-bottom: 1px solid #f3f3f4;
+}
+.about-contant{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 20px;
+}
+.item{
+    display: flow-root;
+}
+.icon{
+    float: left;
+    width: 20%;
+}
+.icon i{
+    font-size: 50px;
+    color: #7971ea;
+}
+.contant{
+    float: left;
+    width: 80%;
+}
+.contant h2{
+    color: #25262a;
+    letter-spacing: .05em;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+.contant p{
+    line-height: 1.7;
+    color: #8c92a0;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+/* ***********************
+*     category section css
+**************************/
+.category{
+    width: 100%;
+    padding: 100px 0;
+}
+.category-contant{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 16px;
+}
+.c-item{
+    position: relative;
+    overflow: hidden;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to bottom, transparent 0%, transparent 18%, rgba(0, 0, 0, 0.8) 99%, rgba(0, 0, 0, 0.8) 100%);
+    z-index: 999;
+}
+.c-item-content{
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    z-index: 9999;
+}
+.c-item-content h6{
+    font-size: 12px;
+    letter-spacing: .1em;
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.7;
+}
+.c-item-content h3{
+    color: #fff;
+    font-size: 40px;
+    margin-bottom: 0.5rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+}
+.c-item img{
+    transition: 0.5s;
+    z-index: -1;
+}
+.c-item:hover img{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+/* ********************
+*     product section css
+*********************** */
+.product{
+    width: 100%;
+    padding: 100px 0;
+    background-color: #f8f9fa;
+}
+.product-title{
+    text-align: center;
+}
+.line{
+    width: 40px;
+    height: 2px;
+    background: #7971ea;
+    margin: 30px auto;
+}
+.product-title h2{
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #25262a;
+    margin-bottom: 50px;
+}
+.owl-dots{
+    display: none;
+}
+.p-item{
+    text-align: center;
+}
+.p-item h3{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+.p-item h3 a{
+    color: #7971ea;
+}
+.p-item h3 a:hover{
+    color: #3a2ee0;
+}
+.p-item .fpp{
+    line-height: 1.7;
+    color: #8c92a0;
+    font-weight: 300;
+    font-size: 16px;
+}
+.p-item p{
+    color: #7971ea;
+    font-weight: 700;
+}
+
+/* ******
+*     sale section css
+**********/
+.sale{
+    width: 100%;
+    padding: 60px 0;
+    border-bottom: 1px solid #f3f3f4;
+}
+.sale-title h2{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 50px;
+}
+.sale-contant{
+    display: flex;
+}
+.sale-contant .left{
+    flex-basis: 50%;
+}
+.sale-contant .right{
+    flex-basis: 50%;
+    padding-left: 3rem;
+    text-align: center;
+    margin-top: 80px;
+}
+.right h2{
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+.right h2 a{
+    color: #7971ea;
+    transition: 0.4s;
+}
+.right h2 a:hover{
+    color: #3a2ee0;
+    transition: 0.4s;
+}
+.right p{
+    color: #c4c7ce;
+    margin-bottom: 1.5rem !important;
+    line-height: 1.7;
+    font-weight: 300;
+    font-size: 16px;
+}
+.right p a{
+    color: #7971ea;
+    transition: 0.4s;
+}
+.right p a:hover{
+    color: #3a2ee0;
+    transition: 0.4s;
+}
+.right .pp{
+    line-height: 1.7;
+    color: #8c92a0;
+    font-weight: 300;
+    font-size: 16px;
+}
+.right button:hover{
+    background-color: #5a50e5;
+    box-shadow: 0 5px 20px -7px rgba(0, 0, 0, 0.9) !important;
+    transform: translateY(-4px);
+    transition: 0.4s;
+}
+
+/* ********
+*     footer section css
+***********/
+.footer{
+    width: 100%;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+.footer-contant{
+    display: flex;
+}
+.navigations-item li{
+    display: inline-block;
+}
+.navigations{
+    flex-basis: 50%;
+    display: flex;
+}
+.navigations-item{
+    flex-basis: 33.33%;
+}
+.navigations-item h3, .promo-item h3{
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 20px;
+    color: #25262a;
+    margin-bottom: 1.5rem !important;
+}
+.navigations-item ul li a{
+    color: #5c626e;
+    transition: .3s;
+    line-height: 2.5;
+    font-weight: 300;
+    font-size: 16px;
+}
+.navigations-item ul li a:hover{
+    color: #7971ea;
+    transition: .3s;
+}
+.n2{
+    margin-top: 48px;
+    margin-left: 110px;
+}
+.promo-contact{
+    flex-basis: 50%;
+    display: flex;
+}
+.promo-item{
+    flex-basis: 50%;
+    margin-left: 150px;
+}
+.promo-item a h3{
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.2;
+    color: #7971ea;
+}
+.promo-item img{
+    width: 200px;
+    margin-bottom: 7px;
+}
+.promo-item a{
+    color: #7971ea;
+	font-size: 18px;
+	font-weight: 300;
+}
+.promo-item a:hover{
+    color: #5a50e5;
+}
+.promo-item p{
+    color: #737b8a;
+	font-size: 18px;
+	font-weight: 300;
+}
+.contact{
+    flex-basis: 50%;
+    margin-left: 32px;
+}
+.contact i{
+    float: left;
+	color: #7971ea;
+	font-size: 18px;
+    margin-left: -30px;
+    margin-top: 6px;
+}
+.contact li{
+    margin-left: 32px;
+	color: #25262a;
+	font-size: 18px;
+	font-weight: 300;
+	padding-bottom: 16px;
+}
+.address{
+    margin-top: 22px;
+    position: relative;
+    margin-bottom: 15px;
+    color: #25262a;
+    line-height: 1.5;
+    font-weight: 300;
+    font-size: 16px;
+}
+/* *****************************
+*     copyright section css
+********************************* */
+.copyright{
+	width: 100%;
+}
+.copyright-contant{
+	text-align: center;
+	margin-bottom: 100px;
+}
+.copyright-contant p{
+	color: #8c92a0;
+    font-size: 16px;
+    font-weight: 300;
+}
+.copyright-contant p span{
+	color: #7971ea;
+	cursor: pointer;
+}
